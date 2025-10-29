@@ -43,7 +43,7 @@
 
 #navbar__logo {
     background-color: #ff8177;
-    background-image: linear-gradient(to top, #ff471a 0%, #ffb3b3 100%);
+    background-image: linear-gradient(to top, #fd9d85 0%, #f70505 100%);
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -265,7 +265,8 @@
 }
 
 .main__content h2 {
-    font-size: 4rem;
+    font-size: 3rem;
+    font-style: italic;
     background-color: #ff8177;
     background-image: linear-gradient(to top, #ffb199 0%, #F54927 100%) ;
     background-size: 100%;
@@ -278,8 +279,8 @@
 .main__content p {
     margin-top: 1rem;
     font-size: 1.5rem;
-    font-weight: 600;
-    color: #ff8080;
+    font-weight: 300;
+    color: #f59471;
 }
 
 .main__btn {
