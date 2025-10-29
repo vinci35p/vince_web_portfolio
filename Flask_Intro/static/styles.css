@@ -519,7 +519,11 @@
 }
 
 .footer__link--items h2 {
-    color: #f99185;
+    color: #f08673;
+}
+
+.footer__link--items p {
+    color: #ffff;
 }
 
 .footer__link--items a {
@@ -585,6 +589,10 @@
     background-image: linear-gradient(to right, #ff7b54, #ff471a);
     transform: scale(1.05);
     transition: all 0.3s ease;
+}
+
+.main.works-page {
+    padding-bottom: 500px;
 }
 
 
