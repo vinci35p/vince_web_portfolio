@@ -3,22 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VinceWebsite</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>About - VinceWebsite</title>
+    
+    <!-- CSS and Fonts -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
 
-    <!-- Navbar Section -->
+<body>
+    <!-- Navbar -->
     <nav class="navbar">
         <div class="navbar__container">
-            <a href="index.html" id="navbar__logo">
+            <a href="{{ url_for('home') }}" id="navbar__logo">
                 <i class="fa-solid fa-fish"></i> Vincent
             </a>
             <div class="navbar__toggle" id="mobile-menu">
@@ -28,16 +25,13 @@
             </div>
             <ul class="navbar__menu">
                 <li class="navbar__item">
-                    <a href="index.html" class="navbar__links">Home</a>
+                    <a href="{{ url_for('works') }}" class="navbar__links">Works</a>
                 </li>
                 <li class="navbar__item">
-                    <a href="works.html" class="navbar__links">Works</a>
-                </li>
-                <li class="navbar__item">
-                    <a href="about.html" class="navbar__links">Vincent?</a>
+                    <a href="{{ url_for('about') }}" class="navbar__links">Vincent</a>
                 </li>
                 <li class="navbar__btn">
-                    <a href="index.html" class="button">Home Page</a>
+                    <a href="{{ url_for('home') }}" class="button">Home Page</a>
                 </li>
             </ul>
         </div>
@@ -52,33 +46,33 @@
                 <p>
                     Hi! I’m Vincent — a passionate web developer and creative mind who loves turning ideas into vibrant, functional websites. 
                     I enjoy coding, learning new technologies, and designing things that inspire people. 
-                    When I’m not coding, I’m probably reading, gaming, or else sleeping.
+                    When I’m not coding, I’m probably reading, gaming, or sleeping — or maybe thinking about new project ideas!
                 </p>
-                <button class="main__btn"><a href="works.html">See My Works</a></button>
+                <button class="main__btn">
+                    <a href="{{ url_for('works') }}">See My Works</a>
+                </button>
             </div>
             <div class="main_img--container">
-                <img src="images/pic1.svg" alt="About Image" id="main__img">
+                <img src="{{ url_for('static', filename='images/pic1.svg') }}" alt="About Image" id="main__img">
             </div>
         </div>
     </div>  
 
-     <!-- Footer Section -->
-      <div class="footer__container">
+    <!-- Footer -->
+    <div class="footer__container">
         <div class="footer__links">
             <div class="footer__link--wrapper">
                 <div class="footer__link--items">
-                    <h2>Contacts</h2>
-                    <a href="index.html">Email: vinsoyt4321@gmail.com</a>
-                    <a href="index.html">GitHub: vinci35p </a>
-                    <a href="index.html">Facebook: Vincent Aliling</a>
-                    <a href="index.html">Contact# 09637147947</a>
+                    <h2>REACH ME!</h2>
+                    <p>Email: <a href="mailto:vinsoyt4321@gmail.com">vinsoyt4321@gmail.com</a></p>
+                    <p>GitHub: <a href="https://github.com/vinci35p" target="_blank">vinci35p</a></p>
+                    <p>Facebook: <a href="https://www.facebook.com/vinsoyt.ali.2424" target="_blank">Vincent Aliling</a></p>
+                    <p>Contact#: 09637147947</p>
                 </div>
             </div>
         </div>
-      </div>
+    </div>
 
-
-    <script src="app.js"></script>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
 </body>
 </html>
-
